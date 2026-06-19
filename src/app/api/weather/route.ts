@@ -34,13 +34,6 @@ function normalize(raw: OpenWeatherCurrentResponse, cityName: string): WeatherDa
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
-/**
- * GET /api/weather?region=denpasar
- *
- * Proxies OpenWeatherMap Current Weather Data API.
- * API key lives server-side in .env.local — never exposed to client.
- * Uses Next.js fetch cache with revalidate: 300 (5 min ISR).
- */
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
   const regionId = searchParams.get("region") ?? "denpasar";
