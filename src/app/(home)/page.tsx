@@ -55,11 +55,11 @@ export default function HomePage() {
                 className="inline-block px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md text-white/90 text-sm mb-6 border border-white/20">
                 {lang === "en" ? "Explore the Island of Gods" : "探索众神之岛"}
               </motion.span>
-              <h1 className="font-serif text-5xl sm:text-6xl lg:text-7xl font-bold text-bali-charcoal tracking-tight leading-tight text-shadow-soft">
+              <h1 className="font-serif text-5xl sm:text-6xl lg:text-7xl font-bold text-white tracking-tight leading-tight text-shadow-soft">
                 {lang === "en" ? "Discover Your" : "发现你的"}<br />
                 <span className="text-bali-gold">{lang === "en" ? "Bali Story" : "巴厘故事"}</span>
               </h1>
-              <p className="mt-6 text-lg text-bali-charcoal/70 leading-relaxed max-w-lg">
+              <p className="mt-6 text-lg text-white leading-relaxed max-w-lg">
                 {lang === "en"
                   ? "From Ubud's morning mist to Uluwatu's cliff sunsets — carefully curated journeys into the soul of Bali."
                   : "从乌布梯田的晨雾到乌鲁瓦图的悬崖落日，精心策划的旅行体验带你深入巴厘岛的灵魂。"}
