@@ -22,6 +22,7 @@ mkdir -p .next/output/_next
 cp -r .next/static .next/output/_next/static
 
 # Copy functions for API routes
-cp -r functions .next/output/
+mkdir -p .next/output/functions
+cp -r functions/* .next/output/functions/
 
 echo "Build complete. Output: .next/output/"
