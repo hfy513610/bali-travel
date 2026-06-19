@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bali-sand: #F5E6D3;
+    --bali-sunset: #E07A5F;
+    --bali-ocean: #3D5A80;
+    --bali-jungle: #2D6A4F;
+    --bali-temple: #8B5E3C;
+    --bali-gold: #C9A96E;
+  }
+
+  * { @apply border-bali-sand/30; }
+  body { @apply bg-bali-cream text-bali-charcoal font-sans; }
+}
+
+@layer utilities {
+  .text-balance { text-wrap: balance; }
+  .text-shadow-soft { text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3); }
+
+  /* Hide scrollbar for recommendation horizontal scroll */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.leaflet-container {
+  @apply rounded-2xl shadow-lg;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { @apply bg-bali-cream; }
+::-webkit-scrollbar-thumb { @apply bg-bali-gold/40 rounded-full; }
+::-webkit-scrollbar-thumb:hover { @apply bg-bali-gold/60; }
