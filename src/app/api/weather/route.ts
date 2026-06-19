@@ -1,6 +1,15 @@
 import { NextResponse } from "next/server";
 import type { BaliRegion, WeatherData, OpenWeatherCurrentResponse } from "@/types/weather";
 
+/**
+ * API Route Handler — proxies OpenWeatherMap API for local dev (npm run dev).
+ *
+ * On Cloudflare Pages, this route is handled by functions/api/weather.js instead.
+ * Locally, reads OPENWEATHER_API_KEY from .env.local.
+ *
+ * GET /api/weather?region=denpasar&lang=zh_cn
+ */
+
 const API_BASE = "https://api.openweathermap.org/data/2.5/weather";
 
 const BALI_REGIONS: BaliRegion[] = [
